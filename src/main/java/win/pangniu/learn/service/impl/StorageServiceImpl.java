@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.util.FileSystemUtils;
+
 import win.pangniu.learn.param.MultipartFileParam;
 import win.pangniu.learn.service.StorageService;
 import win.pangniu.learn.utils.Constants;
@@ -95,6 +96,7 @@ public class StorageServiceImpl implements StorageService {
         }
     }
 
+    @SuppressWarnings("resource")
     @Override
     public void uploadFileByMappedByteBuffer(MultipartFileParam param) throws IOException {
         String fileName = param.getName();

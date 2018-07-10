@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+
 import win.pangniu.learn.param.MultipartFileParam;
 import win.pangniu.learn.service.StorageService;
 import win.pangniu.learn.utils.Constants;
@@ -18,6 +19,7 @@ import win.pangniu.learn.vo.ResultStatus;
 import win.pangniu.learn.vo.ResultVo;
 
 import javax.servlet.http.HttpServletRequest;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.LinkedList;
@@ -30,6 +32,7 @@ import java.util.List;
  */
 @Controller
 @RequestMapping(value = "/index")
+@SuppressWarnings({ "unchecked", "rawtypes" })
 public class IndexController {
 
     private Logger logger = LoggerFactory.getLogger(IndexController.class);

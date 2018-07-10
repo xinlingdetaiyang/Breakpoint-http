@@ -1,5 +1,7 @@
 package win.pangniu.learn.test;
 
+import java.util.List;
+
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
@@ -8,12 +10,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.SessionCallback;
 import org.springframework.data.redis.core.StringRedisTemplate;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.URL;
-import java.net.URLConnection;
-import java.util.List;
-
+@SuppressWarnings({ "unchecked", "rawtypes" })
 public class AppTest extends BaseTest {
 
     @Autowired
@@ -37,6 +34,7 @@ public class AppTest extends BaseTest {
     @Test
     public void testRedisMap() {
         Object object = redisTemplate.execute(new SessionCallback() {
+
             @Override
             public Object execute(RedisOperations operations) throws DataAccessException {
                 operations.multi();
