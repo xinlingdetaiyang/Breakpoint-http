@@ -10,6 +10,7 @@ server:
     remoteIpHeader: x-forwarded-for
     basedir:
     backgroundProcessorDelay: 30
+    
   session:
     timeout: 30 # secs
 

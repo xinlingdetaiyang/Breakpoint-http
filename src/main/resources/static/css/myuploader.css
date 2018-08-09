@@ -1,0 +1,79 @@
+@CHARSET "UTF-8";
+
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none
+}
+
+.error-tip {
+    color: red;
+    line-height: 36px;
+    text-align: center;
+    display: none;
+}
+
+.error-tip .icon {
+    display: inline-block;
+    width: 18px;
+    height: 14px;
+    background: url("../images/icon-error-tip.png") no-repeat;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+    margin-right: -2px;
+}
+
+#theList li {
+    margin-top: 5px;
+    height: 100px;
+}
+
+#theList li .view {
+    position: relative;
+    display: inline-block;
+}
+#theList li .view img {
+    width: 100px;
+}
+
+#theList li .view .itemName, #theList li .preview {
+    position: absolute;
+    left: 0;
+    font-size: 12px;
+    width: 100px;
+    /* overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; */
+}
+
+#theList li .view .preview {
+    top: 50px;
+    text-align: center;
+}
+
+#theList li .btn_info {
+    display: inline-block;
+    vertical-align: middle;
+    width: 60%;
+}
+
+#theList li .btn_info .progress {
+    margin: 6px 12px 0;
+}
+
+#theList li .btn_info .status {
+    padding: 6px 12px;
+    font-size: 14px;
+    text-align: center;
+}
+
+#theList li .itemUpload, #theList li .itemStop, #theList li .itemDel {
+    cursor: pointer;
+    color: blue
+}
+
+#theList li .itemStop {
+    display: none;
+}
+
